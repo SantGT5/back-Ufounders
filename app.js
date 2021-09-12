@@ -1,10 +1,10 @@
 
 const express = require("express");
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 // const cors = require("cors");
-// app.use(cors({ origin: "process.env.REACT_APP_URL" }));
+// app.use(cors({ origin: "*" }));
 
 const TicketList = require( "./router/list.router" )
 app.use( "/", TicketList )
