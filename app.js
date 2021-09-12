@@ -1,11 +1,11 @@
 
 const express = require("express");
 const app = express();
-
 const PORT = 4000;
 
-const cors = require("cors");
-app.use(cors({ origin: "*" }));
+// const cors = require("cors");
+// app.use(cors({ origin: "process.env.REACT_APP_URL" }));
+
 const TicketList = require( "./router/list.router" )
 app.use( "/", TicketList )
 
